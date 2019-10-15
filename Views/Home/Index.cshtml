@@ -1,0 +1,17 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+<!--Add the W3 Schools style sheet for the navigation bar-->
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+<div class="w3-bar w3-black">
+    <!--The first in quotes is the Method, the second is the Contoller-->
+    <a href="@Url.Action("Index", "Stack")" class="w3-bar-item w3-button">Stack</a>
+    <a href="@Url.Action("Index", "Queue")" class="w3-bar-item w3-button">Queue</a>
+    <a href="@Url.Action("Index", "Dictionary")" class="w3-bar-item w3-button">Dictionary</a>
+    <a href="@Url.Action("Exit", "Home")" class="w3-bar-item w3-button">Exit</a>
+</div>
+
+<h2>Index</h2>
+

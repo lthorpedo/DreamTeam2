@@ -1,0 +1,30 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+@{ 
+    Layout = null;
+}
+
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="~/Content/Style.css" />
+
+<div class="w3-sidebar w3-light-grey w3-bar-block" style="width:25%">
+    <h2 class="title">Dictionary</h2>
+    <h3 class="w3-bar-item">Menu</h3>
+    <a href="@Url.Action("AddOne", "Dictionary")" class="w3-bar-item w3-button">1. Add one item to the Dictionary</a>
+    <a href="@Url.Action("AddMultiple", "Dictionary")" class="w3-bar-item w3-button">2. Add huge list of items to the Dictionary</a>
+    <a href="@Url.Action("Display", "Dictionary")" class="w3-bar-item w3-button">3. Display Dictionary</a>
+    <a href="@Url.Action("Delete", "Dictionary")" class="w3-bar-item w3-button">4. Delete from Dictionary</a>
+    <a href="@Url.Action("Clear", "Dictionary")" class="w3-bar-item w3-button">5. Clear Dictionary</a>
+    <a href="@Url.Action("Search","Dictionary")" class="w3-bar-item w3-button">6. Search Dictionary</a>
+    <a href="@Url.Action("Index", "Home")" class="w3-bar-item w3-button">7. Return to Main Menu</a>
+</div>
+<div class="center data">
+    <p>@Html.Raw((String)ViewBag.Message)</p>
+    @if (ViewBag.StopWatch != null)
+    {
+        <p>@Html.Raw((String)ViewBag.StopWatch)</p>
+    }
+
+</div>

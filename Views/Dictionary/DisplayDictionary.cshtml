@@ -1,0 +1,26 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>DisplayDictionary</title>
+</head>
+<body>
+
+    <a href="@Url.Action("Index", "Dictionary")" class="w3-bar-item w3-button">Return to Dictionary Menu</a>
+
+    <div class="center">
+        @if (ViewBag.ADictionary != null)
+        {
+            foreach (var dData in ViewBag.ADictionary)
+            {
+                <p>@dData</p>
+            }
+        }
+    </div>
+</body>
+</html>

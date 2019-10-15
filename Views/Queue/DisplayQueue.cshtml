@@ -1,0 +1,17 @@
+﻿@{
+    ViewBag.Title = "DisplayQueue";
+}
+
+<h2>Queue</h2>
+
+<a href="@Url.Action("Index", "Queue")" class="w3-bar-item w3-button">Return to Queue</a>
+
+<div class="center data">
+    @if (ViewBag.Queue != null)
+    {
+        foreach (var qData in ViewBag.Queue)
+        {
+            <p>@qData</p>
+        }
+    }
+</div>

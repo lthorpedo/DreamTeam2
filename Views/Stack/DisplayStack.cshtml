@@ -1,0 +1,18 @@
+﻿
+@{
+    ViewBag.Title = "DisplayStack";
+}
+
+<h2>Stack</h2>
+
+<a href="@Url.Action("Index", "Stack")" class="w3-bar-item w3-button">Return to Stack</a>
+
+<div class="center data">
+    @if (ViewBag.Stack != null)
+    {
+        foreach (var sData in ViewBag.Stack)
+        {
+            <p>@sData</p>
+        }
+    }
+</div>

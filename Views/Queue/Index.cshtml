@@ -1,0 +1,27 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="~/Content/Style.css" />
+
+<div class="w3-sidebar w3-light-grey w3-bar-block" style="width:25%">
+    <h2 class="title">Queue</h2>
+    <h3 class="w3-bar-item">Menu</h3>
+    <a href="@Url.Action("AddOne", "Queue")" class="w3-bar-item w3-button">1. Add one item to the Queue</a>
+    <a href="@Url.Action("AddMultiple", "Queue")" class="w3-bar-item w3-button">2. Add huge list of items to the Queue</a>
+    <a href="@Url.Action("Display", "Queue")" class="w3-bar-item w3-button">3. Display Queue</a>
+    <a href="@Url.Action("Delete", "Queue")" class="w3-bar-item w3-button">4. Delete from Queue</a>
+    <a href="@Url.Action("Clear", "Queue")" class="w3-bar-item w3-button">5. Clear Queue</a>
+    <a href="@Url.Action("Search","Queue")" class="w3-bar-item w3-button">6. Search Queue</a>
+    <a href="@Url.Action("Index", "Home")" class="w3-bar-item w3-button">7. Return to Main Menu</a>
+</div>
+<div class="center data">
+    <p>@Html.Raw((String)ViewBag.Message)</p>
+    @if (ViewBag.StopWatch != null)
+    {
+        <p>@Html.Raw((String)ViewBag.StopWatch)</p>
+    }
+
+</div>
